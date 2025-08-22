@@ -1,23 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chess Game</title>
-  <link rel="stylesheet" href="chess.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chess – Legal Moves & Highlights</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Chess Game</h1>
-
-  <div class="wrap">
-    <div id="board"></div>
-    <div class="panel">
-      <h2 id="status"></h2>
-      <button class="btn" onclick="restartGame()">Restart</button>
-      <p class="note">Click a piece, then click where to move it.</p>
+  <div class="app">
+    <div class="board-wrapper">
+      <div id="board" class="board" aria-label="Chess board" role="grid"></div>
     </div>
+
+    <aside class="panel">
+      <h2>Chess (Legal Moves & Highlights)</h2>
+      <div id="status" class="status">White to move</div>
+      <div class="btns">
+        <button id="newGame">New Game</button>
+        <button id="flipBoard">Flip Board</button>
+        <button id="undoBtn">Undo</button>
+      </div>
+
+      <div class="legend">
+        <div class="card">
+          <h3>Highlights</h3>
+          <div class="row"><span class="dot mv"></span> Available move</div>
+          <div class="row"><span class="dot cap"></span> Capture</div>
+          <div class="row"><span class="dot sel"></span> Selected</div>
+          <div class="row"><span class="dot chk"></span> King in check</div>
+        </div>
+        <div class="card">
+          <h3>Pieces (Pictures)</h3>
+          <div class="row"><span style="font-size:22px">♔♕♖♗♘♙</span> White</div>
+          <div class="row"><span style="font-size:22px">♚♛♜♝♞♟</span> Black</div>
+        </div>
+      </div>
+    </aside>
   </div>
 
-  <script src="chess.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
